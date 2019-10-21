@@ -47,42 +47,6 @@ func (f Factory) New(args []string) (Cmd, error) {
 	}
 
 	parser.CommandHandler = func(command goflags.Commander, extraArgs []string) error {
-		if opts, ok := command.(*SSHOpts); ok {
-			if len(opts.Command) == 0 {
-				opts.Command = extraArgs
-				extraArgs = []string{}
-			}
-		}
-
-		if opts, ok := command.(*AliasEnvOpts); ok {
-			opts.URL = boshOpts.EnvironmentOpt
-			opts.CACert = boshOpts.CACertOpt
-		}
-
-		if opts, ok := command.(*EventsOpts); ok {
-			opts.Deployment = boshOpts.DeploymentOpt
-		}
-
-		if opts, ok := command.(*VMsOpts); ok {
-			opts.Deployment = boshOpts.DeploymentOpt
-		}
-
-		if opts, ok := command.(*InstancesOpts); ok {
-			opts.Deployment = boshOpts.DeploymentOpt
-		}
-
-		if opts, ok := command.(*TasksOpts); ok {
-			opts.Deployment = boshOpts.DeploymentOpt
-		}
-
-		if opts, ok := command.(*TaskOpts); ok {
-			opts.Deployment = boshOpts.DeploymentOpt
-		}
-
-		if opts, ok := command.(*CancelTasksOpts); ok {
-			opts.Deployment = boshOpts.DeploymentOpt
-		}
-
 		if len(extraArgs) > 0 {
 			errMsg := "Command '%T' does not support extra arguments: %s"
 			return fmt.Errorf(errMsg, command, strings.Join(extraArgs, ", "))
@@ -92,10 +56,6 @@ func (f Factory) New(args []string) (Cmd, error) {
 
 		return nil
 	}
-
-	boshOpts.SSH.GatewayFlags.UUIDGen = f.deps.UUIDGen
-	boshOpts.SCP.GatewayFlags.UUIDGen = f.deps.UUIDGen
-	boshOpts.Logs.GatewayFlags.UUIDGen = f.deps.UUIDGen
 
 	helpText := bytes.NewBufferString("")
 	parser.WriteHelp(helpText)

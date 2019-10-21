@@ -31,7 +31,6 @@ var _ = Describe("Cmd", func() {
 		fs = fakesys.NewFakeFileSystem()
 
 		deps := NewBasicDeps(confUI, logger)
-		deps.FS = fs
 
 		cmd = NewCmd(BoshOpts{}, nil, deps)
 	})
