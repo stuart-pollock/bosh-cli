@@ -4,10 +4,10 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
-	boshdir "github.com/cloudfoundry/bosh-cli/director"
-	fakedir "github.com/cloudfoundry/bosh-cli/director/directorfakes"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
+	boshdir "github.com/stuart-pollock/bosh-cli/director"
+	fakedir "github.com/stuart-pollock/bosh-cli/director/directorfakes"
 )
 
 var _ = Describe("CancelTasksCmd", func() {

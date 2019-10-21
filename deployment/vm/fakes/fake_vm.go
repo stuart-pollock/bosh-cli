@@ -5,9 +5,9 @@ import (
 
 	biagentclient "github.com/cloudfoundry/bosh-agent/agentclient"
 	bias "github.com/cloudfoundry/bosh-agent/agentclient/applyspec"
-	bidisk "github.com/cloudfoundry/bosh-cli/deployment/disk"
-	bideplmanifest "github.com/cloudfoundry/bosh-cli/deployment/manifest"
-	biui "github.com/cloudfoundry/bosh-cli/ui"
+	bidisk "github.com/stuart-pollock/bosh-cli/deployment/disk"
+	bideplmanifest "github.com/stuart-pollock/bosh-cli/deployment/manifest"
+	biui "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type FakeVM struct {

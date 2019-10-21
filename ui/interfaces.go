@@ -1,7 +1,7 @@
 package ui
 
 import (
-	. "github.com/cloudfoundry/bosh-cli/ui/table"
+	. "github.com/stuart-pollock/bosh-cli/ui/table"
 )
 
 type UI interface {

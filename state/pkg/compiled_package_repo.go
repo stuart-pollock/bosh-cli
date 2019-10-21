@@ -5,8 +5,8 @@ import (
 	"sort"
 	"strings"
 
-	biindex "github.com/cloudfoundry/bosh-cli/index"
-	birelpkg "github.com/cloudfoundry/bosh-cli/release/pkg"
+	biindex "github.com/stuart-pollock/bosh-cli/index"
+	birelpkg "github.com/stuart-pollock/bosh-cli/release/pkg"
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 )
 

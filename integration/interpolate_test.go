@@ -10,9 +10,9 @@ import (
 	"gopkg.in/yaml.v2"
 	"time"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	boshui "github.com/cloudfoundry/bosh-cli/ui"
-	fakeui "github.com/cloudfoundry/bosh-cli/ui/fakes"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	boshui "github.com/stuart-pollock/bosh-cli/ui"
+	fakeui "github.com/stuart-pollock/bosh-cli/ui/fakes"
 )
 
 var _ = Describe("interpolate command", func() {

@@ -1,15 +1,15 @@
 package stemcell_test
 
 import (
-	. "github.com/cloudfoundry/bosh-cli/stemcell"
+	. "github.com/stuart-pollock/bosh-cli/stemcell"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
 	"errors"
 
-	bicloud "github.com/cloudfoundry/bosh-cli/cloud"
-	fakebicloud "github.com/cloudfoundry/bosh-cli/cloud/fakes"
-	biconfig "github.com/cloudfoundry/bosh-cli/config"
+	bicloud "github.com/stuart-pollock/bosh-cli/cloud"
+	fakebicloud "github.com/stuart-pollock/bosh-cli/cloud/fakes"
+	biconfig "github.com/stuart-pollock/bosh-cli/config"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 	fakesys "github.com/cloudfoundry/bosh-utils/system/fakes"
 	fakeuuid "github.com/cloudfoundry/bosh-utils/uuid/fakes"

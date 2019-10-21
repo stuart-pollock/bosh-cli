@@ -2,10 +2,10 @@ package opts
 
 import (
 	boshuuid "github.com/cloudfoundry/bosh-utils/uuid"
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 
-	boshdir "github.com/cloudfoundry/bosh-cli/director"
-	boshrel "github.com/cloudfoundry/bosh-cli/release"
+	boshdir "github.com/stuart-pollock/bosh-cli/director"
+	boshrel "github.com/stuart-pollock/bosh-cli/release"
 )
 
 type BoshOpts struct {

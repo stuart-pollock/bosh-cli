@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	boshdir "github.com/cloudfoundry/bosh-cli/director"
-	boshui "github.com/cloudfoundry/bosh-cli/ui"
+	boshdir "github.com/stuart-pollock/bosh-cli/director"
+	boshui "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type CloudConfigCmd struct {

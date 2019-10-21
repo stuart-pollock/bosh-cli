@@ -6,9 +6,9 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
-	fakereldir "github.com/cloudfoundry/bosh-cli/releasedir/releasedirfakes"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
+	fakereldir "github.com/stuart-pollock/bosh-cli/releasedir/releasedirfakes"
 )
 
 var _ = Describe("GenerateJobCmd", func() {

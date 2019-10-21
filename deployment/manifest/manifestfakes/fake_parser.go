@@ -4,8 +4,8 @@ package manifestfakes
 import (
 	"sync"
 
-	"github.com/cloudfoundry/bosh-cli/deployment/manifest"
-	bidepltpl "github.com/cloudfoundry/bosh-cli/deployment/template"
+	"github.com/stuart-pollock/bosh-cli/deployment/manifest"
+	bidepltpl "github.com/stuart-pollock/bosh-cli/deployment/template"
 )
 
 type FakeParser struct {

@@ -1,8 +1,8 @@
 package manifest
 
 import (
-	biutil "github.com/cloudfoundry/bosh-cli/common/util"
-	bidepltpl "github.com/cloudfoundry/bosh-cli/deployment/template"
+	biutil "github.com/stuart-pollock/bosh-cli/common/util"
+	bidepltpl "github.com/stuart-pollock/bosh-cli/deployment/template"
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 	biproperty "github.com/cloudfoundry/bosh-utils/property"

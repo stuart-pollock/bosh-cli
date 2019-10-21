@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	bio "github.com/cloudfoundry/bosh-cli/io"
+	bio "github.com/stuart-pollock/bosh-cli/io"
 	biproperty "github.com/cloudfoundry/bosh-utils/property"
 	semver "github.com/cppforlife/go-semi-semantic/version"
 )

@@ -4,12 +4,12 @@ import (
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 	boshsys "github.com/cloudfoundry/bosh-utils/system"
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 	"gopkg.in/yaml.v2"
 
-	biutil "github.com/cloudfoundry/bosh-cli/common/util"
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
-	birelmanifest "github.com/cloudfoundry/bosh-cli/release/manifest"
+	biutil "github.com/stuart-pollock/bosh-cli/common/util"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
+	birelmanifest "github.com/stuart-pollock/bosh-cli/release/manifest"
 )
 
 type Parser interface {

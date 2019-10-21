@@ -11,7 +11,7 @@ import (
 	"github.com/mattn/go-isatty"
 	"github.com/vito/go-interact/interact"
 
-	. "github.com/cloudfoundry/bosh-cli/ui/table"
+	. "github.com/stuart-pollock/bosh-cli/ui/table"
 )
 
 type WriterUI struct {

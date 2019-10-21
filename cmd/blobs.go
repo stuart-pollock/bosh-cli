@@ -1,9 +1,9 @@
 package cmd
 
 import (
-	boshreldir "github.com/cloudfoundry/bosh-cli/releasedir"
-	boshui "github.com/cloudfoundry/bosh-cli/ui"
-	boshtbl "github.com/cloudfoundry/bosh-cli/ui/table"
+	boshreldir "github.com/stuart-pollock/bosh-cli/releasedir"
+	boshui "github.com/stuart-pollock/bosh-cli/ui"
+	boshtbl "github.com/stuart-pollock/bosh-cli/ui/table"
 )
 
 type BlobsCmd struct {

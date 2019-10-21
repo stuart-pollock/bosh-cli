@@ -4,9 +4,9 @@ import (
 	gosha512 "crypto/sha512"
 	"fmt"
 
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
 )
 
 type DeploymentTemplate struct {

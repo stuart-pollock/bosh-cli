@@ -10,14 +10,14 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/cloudfoundry/bosh-cli/installation"
-	biinstallmanifest "github.com/cloudfoundry/bosh-cli/installation/manifest"
-	bireljob "github.com/cloudfoundry/bosh-cli/release/job"
-	birelpkg "github.com/cloudfoundry/bosh-cli/release/pkg"
-	. "github.com/cloudfoundry/bosh-cli/release/resource"
-	bitemplate "github.com/cloudfoundry/bosh-cli/templatescompiler"
-	mock_template "github.com/cloudfoundry/bosh-cli/templatescompiler/mocks"
-	fakebiui "github.com/cloudfoundry/bosh-cli/ui/fakes"
+	"github.com/stuart-pollock/bosh-cli/installation"
+	biinstallmanifest "github.com/stuart-pollock/bosh-cli/installation/manifest"
+	bireljob "github.com/stuart-pollock/bosh-cli/release/job"
+	birelpkg "github.com/stuart-pollock/bosh-cli/release/pkg"
+	. "github.com/stuart-pollock/bosh-cli/release/resource"
+	bitemplate "github.com/stuart-pollock/bosh-cli/templatescompiler"
+	mock_template "github.com/stuart-pollock/bosh-cli/templatescompiler/mocks"
+	fakebiui "github.com/stuart-pollock/bosh-cli/ui/fakes"
 	boshcrypto "github.com/cloudfoundry/bosh-utils/crypto"
 )
 

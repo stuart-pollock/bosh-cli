@@ -1,11 +1,11 @@
 package fakes
 
 import (
-	bicloud "github.com/cloudfoundry/bosh-cli/cloud"
-	bidisk "github.com/cloudfoundry/bosh-cli/deployment/disk"
-	bideplmanifest "github.com/cloudfoundry/bosh-cli/deployment/manifest"
-	bivm "github.com/cloudfoundry/bosh-cli/deployment/vm"
-	biui "github.com/cloudfoundry/bosh-cli/ui"
+	bicloud "github.com/stuart-pollock/bosh-cli/cloud"
+	bidisk "github.com/stuart-pollock/bosh-cli/deployment/disk"
+	bideplmanifest "github.com/stuart-pollock/bosh-cli/deployment/manifest"
+	bivm "github.com/stuart-pollock/bosh-cli/deployment/vm"
+	biui "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type FakeDiskDeployer struct {

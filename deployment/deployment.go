@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	bicloud "github.com/cloudfoundry/bosh-cli/cloud"
-	bidisk "github.com/cloudfoundry/bosh-cli/deployment/disk"
-	biinstance "github.com/cloudfoundry/bosh-cli/deployment/instance"
-	bistemcell "github.com/cloudfoundry/bosh-cli/stemcell"
-	biui "github.com/cloudfoundry/bosh-cli/ui"
+	bicloud "github.com/stuart-pollock/bosh-cli/cloud"
+	bidisk "github.com/stuart-pollock/bosh-cli/deployment/disk"
+	biinstance "github.com/stuart-pollock/bosh-cli/deployment/instance"
+	bistemcell "github.com/stuart-pollock/bosh-cli/stemcell"
+	biui "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type Deployment interface {

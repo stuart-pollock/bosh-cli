@@ -6,7 +6,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/uaa"
+	. "github.com/stuart-pollock/bosh-cli/uaa"
 )
 
 var _ = Describe("AccessTokenImpl", func() {

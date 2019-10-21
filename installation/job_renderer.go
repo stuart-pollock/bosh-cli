@@ -1,10 +1,10 @@
 package installation
 
 import (
-	biinstallmanifest "github.com/cloudfoundry/bosh-cli/installation/manifest"
-	bireljob "github.com/cloudfoundry/bosh-cli/release/job"
-	bitemplate "github.com/cloudfoundry/bosh-cli/templatescompiler"
-	biui "github.com/cloudfoundry/bosh-cli/ui"
+	biinstallmanifest "github.com/stuart-pollock/bosh-cli/installation/manifest"
+	bireljob "github.com/stuart-pollock/bosh-cli/release/job"
+	bitemplate "github.com/stuart-pollock/bosh-cli/templatescompiler"
+	biui "github.com/stuart-pollock/bosh-cli/ui"
 	boshblob "github.com/cloudfoundry/bosh-utils/blobstore"
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 	boshcmd "github.com/cloudfoundry/bosh-utils/fileutil"

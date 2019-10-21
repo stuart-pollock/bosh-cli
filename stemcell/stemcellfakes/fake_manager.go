@@ -3,8 +3,8 @@ package stemcellfakes
 import (
 	"fmt"
 
-	bistemcell "github.com/cloudfoundry/bosh-cli/stemcell"
-	biui "github.com/cloudfoundry/bosh-cli/ui"
+	bistemcell "github.com/stuart-pollock/bosh-cli/stemcell"
+	biui "github.com/stuart-pollock/bosh-cli/ui"
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 )
 

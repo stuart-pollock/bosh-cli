@@ -4,9 +4,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/cloudfoundry/bosh-cli/installation/blobextract"
-	birelpkg "github.com/cloudfoundry/bosh-cli/release/pkg"
-	bistatepkg "github.com/cloudfoundry/bosh-cli/state/pkg"
+	"github.com/stuart-pollock/bosh-cli/installation/blobextract"
+	birelpkg "github.com/stuart-pollock/bosh-cli/release/pkg"
+	bistatepkg "github.com/stuart-pollock/bosh-cli/state/pkg"
 	boshblob "github.com/cloudfoundry/bosh-utils/blobstore"
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 	boshcmd "github.com/cloudfoundry/bosh-utils/fileutil"

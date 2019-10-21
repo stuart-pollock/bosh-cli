@@ -2,13 +2,13 @@ package cmd
 
 import (
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 	semver "github.com/cppforlife/go-semi-semantic/version"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
-	boshdir "github.com/cloudfoundry/bosh-cli/director"
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
-	boshrel "github.com/cloudfoundry/bosh-cli/release"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
+	boshdir "github.com/stuart-pollock/bosh-cli/director"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
+	boshrel "github.com/stuart-pollock/bosh-cli/release"
 	"github.com/cloudfoundry/bosh-utils/work"
 )
 

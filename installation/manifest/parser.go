@@ -9,12 +9,12 @@ import (
 	biproperty "github.com/cloudfoundry/bosh-utils/property"
 	boshsys "github.com/cloudfoundry/bosh-utils/system"
 	boshuuid "github.com/cloudfoundry/bosh-utils/uuid"
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 	"gopkg.in/yaml.v2"
 
-	biutil "github.com/cloudfoundry/bosh-cli/common/util"
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
-	birelsetmanifest "github.com/cloudfoundry/bosh-cli/release/set/manifest"
+	biutil "github.com/stuart-pollock/bosh-cli/common/util"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
+	birelsetmanifest "github.com/stuart-pollock/bosh-cli/release/set/manifest"
 )
 
 type Parser interface {

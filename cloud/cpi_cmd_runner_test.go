@@ -5,7 +5,7 @@ import (
 	"errors"
 	"io/ioutil"
 
-	. "github.com/cloudfoundry/bosh-cli/cloud"
+	. "github.com/stuart-pollock/bosh-cli/cloud"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 	fakesys "github.com/cloudfoundry/bosh-utils/system/fakes"
 	. "github.com/onsi/ginkgo"

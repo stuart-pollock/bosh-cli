@@ -11,8 +11,8 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	boshidx "github.com/cloudfoundry/bosh-cli/releasedir/index"
-	fakeidx "github.com/cloudfoundry/bosh-cli/releasedir/index/indexfakes"
+	boshidx "github.com/stuart-pollock/bosh-cli/releasedir/index"
+	fakeidx "github.com/stuart-pollock/bosh-cli/releasedir/index/indexfakes"
 
 	boshcrypto "github.com/cloudfoundry/bosh-utils/crypto"
 )

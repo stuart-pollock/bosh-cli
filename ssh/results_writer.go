@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	boshui "github.com/cloudfoundry/bosh-cli/ui"
-	boshtbl "github.com/cloudfoundry/bosh-cli/ui/table"
+	boshui "github.com/stuart-pollock/bosh-cli/ui"
+	boshtbl "github.com/stuart-pollock/bosh-cli/ui/table"
 )
 
 type ResultsWriter struct {

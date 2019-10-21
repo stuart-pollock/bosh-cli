@@ -3,12 +3,12 @@ package disk_test
 import (
 	"errors"
 
-	fakebicloud "github.com/cloudfoundry/bosh-cli/cloud/fakes"
-	biconfig "github.com/cloudfoundry/bosh-cli/config"
-	. "github.com/cloudfoundry/bosh-cli/deployment/disk"
-	bidisk "github.com/cloudfoundry/bosh-cli/deployment/disk"
-	bideplmanifest "github.com/cloudfoundry/bosh-cli/deployment/manifest"
-	fakebiui "github.com/cloudfoundry/bosh-cli/ui/fakes"
+	fakebicloud "github.com/stuart-pollock/bosh-cli/cloud/fakes"
+	biconfig "github.com/stuart-pollock/bosh-cli/config"
+	. "github.com/stuart-pollock/bosh-cli/deployment/disk"
+	bidisk "github.com/stuart-pollock/bosh-cli/deployment/disk"
+	bideplmanifest "github.com/stuart-pollock/bosh-cli/deployment/manifest"
+	fakebiui "github.com/stuart-pollock/bosh-cli/ui/fakes"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 	biproperty "github.com/cloudfoundry/bosh-utils/property"
 	fakesys "github.com/cloudfoundry/bosh-utils/system/fakes"

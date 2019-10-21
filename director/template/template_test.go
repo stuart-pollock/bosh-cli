@@ -4,11 +4,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/director/template"
+	. "github.com/stuart-pollock/bosh-cli/director/template"
 )
 
 var _ = Describe("Template", func() {

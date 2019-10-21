@@ -3,8 +3,8 @@ package cmd
 import (
 	"fmt"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
-	boshdir "github.com/cloudfoundry/bosh-cli/director"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
+	boshdir "github.com/stuart-pollock/bosh-cli/director"
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 )
 

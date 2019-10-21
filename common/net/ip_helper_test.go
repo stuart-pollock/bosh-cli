@@ -5,7 +5,7 @@ import (
 	. "github.com/onsi/gomega"
 	"net"
 
-	binet "github.com/cloudfoundry/bosh-cli/common/net"
+	binet "github.com/stuart-pollock/bosh-cli/common/net"
 )
 
 var _ = Describe("common.net ip helpers", func() {

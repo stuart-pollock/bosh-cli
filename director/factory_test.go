@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"net/http"
 
-	. "github.com/cloudfoundry/bosh-cli/director"
+	. "github.com/stuart-pollock/bosh-cli/director"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 

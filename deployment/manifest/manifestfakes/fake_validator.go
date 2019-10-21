@@ -3,9 +3,9 @@ package manifestfakes
 import (
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 
-	bideplmanifest "github.com/cloudfoundry/bosh-cli/deployment/manifest"
-	biinstall "github.com/cloudfoundry/bosh-cli/installation"
-	birelsetmanifest "github.com/cloudfoundry/bosh-cli/release/set/manifest"
+	bideplmanifest "github.com/stuart-pollock/bosh-cli/deployment/manifest"
+	biinstall "github.com/stuart-pollock/bosh-cli/installation"
+	birelsetmanifest "github.com/stuart-pollock/bosh-cli/release/set/manifest"
 )
 
 type FakeValidator struct {

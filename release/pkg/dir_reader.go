@@ -9,8 +9,8 @@ import (
 
 	"errors"
 
-	. "github.com/cloudfoundry/bosh-cli/release/pkg/manifest"
-	. "github.com/cloudfoundry/bosh-cli/release/resource"
+	. "github.com/stuart-pollock/bosh-cli/release/pkg/manifest"
+	. "github.com/stuart-pollock/bosh-cli/release/resource"
 )
 
 type DirReaderImpl struct {

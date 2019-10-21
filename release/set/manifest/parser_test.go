@@ -5,14 +5,14 @@ import (
 
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 	fakesys "github.com/cloudfoundry/bosh-utils/system/fakes"
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
-	boshman "github.com/cloudfoundry/bosh-cli/release/manifest"
-	"github.com/cloudfoundry/bosh-cli/release/set/manifest"
-	"github.com/cloudfoundry/bosh-cli/release/set/manifest/fakes"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
+	boshman "github.com/stuart-pollock/bosh-cli/release/manifest"
+	"github.com/stuart-pollock/bosh-cli/release/set/manifest"
+	"github.com/stuart-pollock/bosh-cli/release/set/manifest/fakes"
 )
 
 var _ = Describe("Parser", func() {

@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	. "github.com/cloudfoundry/bosh-cli/ui"
+	. "github.com/stuart-pollock/bosh-cli/ui"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 

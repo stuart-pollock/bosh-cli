@@ -14,11 +14,11 @@ import (
 	"encoding/json"
 	"path/filepath"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
-	"github.com/cloudfoundry/bosh-cli/stemcell"
-	"github.com/cloudfoundry/bosh-cli/stemcell/stemcellfakes"
-	fakeui "github.com/cloudfoundry/bosh-cli/ui/fakes"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
+	"github.com/stuart-pollock/bosh-cli/stemcell"
+	"github.com/stuart-pollock/bosh-cli/stemcell/stemcellfakes"
+	fakeui "github.com/stuart-pollock/bosh-cli/ui/fakes"
 	"gopkg.in/yaml.v2"
 )
 

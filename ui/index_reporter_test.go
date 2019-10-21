@@ -6,8 +6,8 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/ui"
-	fakeui "github.com/cloudfoundry/bosh-cli/ui/fakes"
+	. "github.com/stuart-pollock/bosh-cli/ui"
+	fakeui "github.com/stuart-pollock/bosh-cli/ui/fakes"
 )
 
 var _ = Describe("IndexReporter", func() {

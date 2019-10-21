@@ -3,7 +3,7 @@ package director
 import (
 	"io"
 
-	bio "github.com/cloudfoundry/bosh-cli/io"
+	bio "github.com/stuart-pollock/bosh-cli/io"
 )
 
 type NoopFileReporter struct{}

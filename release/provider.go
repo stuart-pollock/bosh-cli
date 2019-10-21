@@ -7,11 +7,11 @@ import (
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 	boshsys "github.com/cloudfoundry/bosh-utils/system"
 
-	bicrypto "github.com/cloudfoundry/bosh-cli/crypto"
-	boshjob "github.com/cloudfoundry/bosh-cli/release/job"
-	boshlic "github.com/cloudfoundry/bosh-cli/release/license"
-	boshpkg "github.com/cloudfoundry/bosh-cli/release/pkg"
-	. "github.com/cloudfoundry/bosh-cli/release/resource"
+	bicrypto "github.com/stuart-pollock/bosh-cli/crypto"
+	boshjob "github.com/stuart-pollock/bosh-cli/release/job"
+	boshlic "github.com/stuart-pollock/bosh-cli/release/license"
+	boshpkg "github.com/stuart-pollock/bosh-cli/release/pkg"
+	. "github.com/stuart-pollock/bosh-cli/release/resource"
 )
 
 type Provider struct {

@@ -9,9 +9,9 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/config"
-	"github.com/cloudfoundry/bosh-cli/release"
-	fakerel "github.com/cloudfoundry/bosh-cli/release/releasefakes"
+	. "github.com/stuart-pollock/bosh-cli/config"
+	"github.com/stuart-pollock/bosh-cli/release"
+	fakerel "github.com/stuart-pollock/bosh-cli/release/releasefakes"
 )
 
 var _ = Describe("ReleaseRepo", func() {

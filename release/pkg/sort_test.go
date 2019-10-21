@@ -7,8 +7,8 @@ import (
 	. "github.com/onsi/gomega"
 	gomegafmt "github.com/onsi/gomega/format"
 
-	. "github.com/cloudfoundry/bosh-cli/release/pkg"
-	. "github.com/cloudfoundry/bosh-cli/release/resource"
+	. "github.com/stuart-pollock/bosh-cli/release/pkg"
+	. "github.com/stuart-pollock/bosh-cli/release/resource"
 )
 
 var _ = Describe("Sort", func() {

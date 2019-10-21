@@ -4,7 +4,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
 )
 
 var _ = Describe("URLArg", func() {

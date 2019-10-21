@@ -4,7 +4,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/director"
+	. "github.com/stuart-pollock/bosh-cli/director"
 	"net/http"
 )
 

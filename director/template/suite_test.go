@@ -5,7 +5,7 @@ import (
 	. "github.com/onsi/gomega"
 	"testing"
 
-	. "github.com/cloudfoundry/bosh-cli/director/template"
+	. "github.com/stuart-pollock/bosh-cli/director/template"
 )
 
 func TestReg(t *testing.T) {

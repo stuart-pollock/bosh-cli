@@ -7,13 +7,13 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	fakecmd "github.com/cloudfoundry/bosh-cli/cmd/cmdfakes"
-	cmdconf "github.com/cloudfoundry/bosh-cli/cmd/config"
-	fakecmdconf "github.com/cloudfoundry/bosh-cli/cmd/config/configfakes"
-	boshuaa "github.com/cloudfoundry/bosh-cli/uaa"
-	fakeuaa "github.com/cloudfoundry/bosh-cli/uaa/uaafakes"
-	fakeui "github.com/cloudfoundry/bosh-cli/ui/fakes"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	fakecmd "github.com/stuart-pollock/bosh-cli/cmd/cmdfakes"
+	cmdconf "github.com/stuart-pollock/bosh-cli/cmd/config"
+	fakecmdconf "github.com/stuart-pollock/bosh-cli/cmd/config/configfakes"
+	boshuaa "github.com/stuart-pollock/bosh-cli/uaa"
+	fakeuaa "github.com/stuart-pollock/bosh-cli/uaa/uaafakes"
+	fakeui "github.com/stuart-pollock/bosh-cli/ui/fakes"
 )
 
 var _ = Describe("UAALoginStrategy", func() {

@@ -1,27 +1,27 @@
 package cmd_test
 
 import (
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
 
-	. "github.com/cloudfoundry/bosh-cli/release/resource"
+	. "github.com/stuart-pollock/bosh-cli/release/resource"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	boshrel "github.com/cloudfoundry/bosh-cli/release"
-	boshjob "github.com/cloudfoundry/bosh-cli/release/job"
-	boshpkg "github.com/cloudfoundry/bosh-cli/release/pkg"
-	boshtbl "github.com/cloudfoundry/bosh-cli/ui/table"
+	boshrel "github.com/stuart-pollock/bosh-cli/release"
+	boshjob "github.com/stuart-pollock/bosh-cli/release/job"
+	boshpkg "github.com/stuart-pollock/bosh-cli/release/pkg"
+	boshtbl "github.com/stuart-pollock/bosh-cli/ui/table"
 
-	fakecrypto "github.com/cloudfoundry/bosh-cli/crypto/fakes"
-	fakerel "github.com/cloudfoundry/bosh-cli/release/releasefakes"
-	fakeui "github.com/cloudfoundry/bosh-cli/ui/fakes"
+	fakecrypto "github.com/stuart-pollock/bosh-cli/crypto/fakes"
+	fakerel "github.com/stuart-pollock/bosh-cli/release/releasefakes"
+	fakeui "github.com/stuart-pollock/bosh-cli/ui/fakes"
 	fakefu "github.com/cloudfoundry/bosh-utils/fileutil/fakes"
 	fakes2 "github.com/cloudfoundry/bosh-utils/system/fakes"
 
-	"github.com/cloudfoundry/bosh-cli/crypto/fakes"
-	"github.com/cloudfoundry/bosh-cli/release/license"
+	"github.com/stuart-pollock/bosh-cli/crypto/fakes"
+	"github.com/stuart-pollock/bosh-cli/release/license"
 	"github.com/cloudfoundry/bosh-utils/errors"
 )
 

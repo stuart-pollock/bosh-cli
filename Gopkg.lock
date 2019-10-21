@@ -213,7 +213,7 @@
 
 [[projects]]
   digest = "1:bb50c52715ad389a1f8dbf6df68c4ef38f73769524f00d49fed3dc8b280f3a54"
-  name = "github.com/cppforlife/go-patch"
+  name = "github.com/stuart-pollock/go-patch"
   packages = ["patch"]
   pruneopts = "NUT"
   revision = "90228d47281247384683e5fded0f15afa3e5d29a"
@@ -757,7 +757,7 @@
     "github.com/cloudfoundry/config-server/types",
     "github.com/cloudfoundry/config-server/types/typesfakes",
     "github.com/cloudfoundry/socks5-proxy",
-    "github.com/cppforlife/go-patch/patch",
+    "github.com/stuart-pollock/go-patch/patch",
     "github.com/cppforlife/go-semi-semantic/version",
     "github.com/dustin/go-humanize",
     "github.com/fatih/color",

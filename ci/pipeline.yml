@@ -246,7 +246,7 @@ resources:
   - name: bosh-cli
     type: git
     source:
-      uri: git@github.com:cloudfoundry/bosh-cli.git
+      uri: git@github.com:stuart-pollock/bosh-cli.git
       branch: develop
       private_key: {{concourse_github_private_key}}
 
@@ -262,12 +262,12 @@ resources:
   - name: bosh-warden-cpi-release
     type: bosh-io-release
     source:
-      repository: cppforlife/bosh-warden-cpi-release
+      repository: stuart-pollock/bosh-warden-cpi-release
 
   - name: bosh-cli-commit-status
     type: github-status
     source:
-      repository: cloudfoundry/bosh-cli
+      repository: stuart-pollock/bosh-cli
       access_token: {{github_token}}
       branch: develop
       context: ci/published
@@ -275,7 +275,7 @@ resources:
   - name: bosh-cli-promoted
     type: git
     source:
-      uri: git@github.com:cloudfoundry/bosh-cli.git
+      uri: git@github.com:stuart-pollock/bosh-cli.git
       branch: master
       private_key: {{concourse_github_private_key}}
 

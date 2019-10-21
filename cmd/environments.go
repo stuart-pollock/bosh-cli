@@ -1,9 +1,9 @@
 package cmd
 
 import (
-	cmdconf "github.com/cloudfoundry/bosh-cli/cmd/config"
-	boshui "github.com/cloudfoundry/bosh-cli/ui"
-	boshtbl "github.com/cloudfoundry/bosh-cli/ui/table"
+	cmdconf "github.com/stuart-pollock/bosh-cli/cmd/config"
+	boshui "github.com/stuart-pollock/bosh-cli/ui"
+	boshtbl "github.com/stuart-pollock/bosh-cli/ui/table"
 )
 
 type EnvironmentsCmd struct {

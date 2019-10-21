@@ -1,7 +1,7 @@
 package opts_test
 
 import (
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 

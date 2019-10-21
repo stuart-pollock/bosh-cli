@@ -4,8 +4,8 @@ package pkgfakes
 import (
 	"sync"
 
-	"github.com/cloudfoundry/bosh-cli/release/manifest"
-	"github.com/cloudfoundry/bosh-cli/release/pkg"
+	"github.com/stuart-pollock/bosh-cli/release/manifest"
+	"github.com/stuart-pollock/bosh-cli/release/pkg"
 )
 
 type FakeArchiveReader struct {

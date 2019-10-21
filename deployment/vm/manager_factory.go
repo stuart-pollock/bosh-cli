@@ -3,8 +3,8 @@ package vm
 import (
 	"code.cloudfoundry.org/clock"
 	biagentclient "github.com/cloudfoundry/bosh-agent/agentclient"
-	bicloud "github.com/cloudfoundry/bosh-cli/cloud"
-	biconfig "github.com/cloudfoundry/bosh-cli/config"
+	bicloud "github.com/stuart-pollock/bosh-cli/cloud"
+	biconfig "github.com/stuart-pollock/bosh-cli/config"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 	boshsys "github.com/cloudfoundry/bosh-utils/system"
 	boshuuid "github.com/cloudfoundry/bosh-utils/uuid"

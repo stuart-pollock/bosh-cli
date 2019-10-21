@@ -6,10 +6,10 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
-	fakedir "github.com/cloudfoundry/bosh-cli/director/directorfakes"
-	fakeui "github.com/cloudfoundry/bosh-cli/ui/fakes"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
+	fakedir "github.com/stuart-pollock/bosh-cli/director/directorfakes"
+	fakeui "github.com/stuart-pollock/bosh-cli/ui/fakes"
 )
 
 var _ = Describe("DeleteDeploymentCmd", func() {

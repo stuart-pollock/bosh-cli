@@ -4,11 +4,11 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cpi/release"
-	boshrel "github.com/cloudfoundry/bosh-cli/release"
-	boshjob "github.com/cloudfoundry/bosh-cli/release/job"
-	fakerel "github.com/cloudfoundry/bosh-cli/release/releasefakes"
-	. "github.com/cloudfoundry/bosh-cli/release/resource"
+	. "github.com/stuart-pollock/bosh-cli/cpi/release"
+	boshrel "github.com/stuart-pollock/bosh-cli/release"
+	boshjob "github.com/stuart-pollock/bosh-cli/release/job"
+	fakerel "github.com/stuart-pollock/bosh-cli/release/releasefakes"
+	. "github.com/stuart-pollock/bosh-cli/release/resource"
 )
 
 var _ = Describe("Validator", func() {

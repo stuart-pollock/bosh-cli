@@ -7,7 +7,7 @@ import (
 
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 
-	. "github.com/cloudfoundry/bosh-cli/ui/table"
+	. "github.com/stuart-pollock/bosh-cli/ui/table"
 	"strconv"
 )
 

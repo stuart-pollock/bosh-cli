@@ -10,11 +10,11 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	boshreljob "github.com/cloudfoundry/bosh-cli/release/job"
-	. "github.com/cloudfoundry/bosh-cli/release/resource"
-	. "github.com/cloudfoundry/bosh-cli/templatescompiler"
-	bierbrenderer "github.com/cloudfoundry/bosh-cli/templatescompiler/erbrenderer"
-	fakebirender "github.com/cloudfoundry/bosh-cli/templatescompiler/erbrenderer/fakes"
+	boshreljob "github.com/stuart-pollock/bosh-cli/release/job"
+	. "github.com/stuart-pollock/bosh-cli/release/resource"
+	. "github.com/stuart-pollock/bosh-cli/templatescompiler"
+	bierbrenderer "github.com/stuart-pollock/bosh-cli/templatescompiler/erbrenderer"
+	fakebirender "github.com/stuart-pollock/bosh-cli/templatescompiler/erbrenderer/fakes"
 )
 
 var _ = Describe("JobRenderer", func() {

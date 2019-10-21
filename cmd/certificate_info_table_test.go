@@ -5,10 +5,10 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	boshdir "github.com/cloudfoundry/bosh-cli/director"
-	fakeui "github.com/cloudfoundry/bosh-cli/ui/fakes"
-	boshtbl "github.com/cloudfoundry/bosh-cli/ui/table"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	boshdir "github.com/stuart-pollock/bosh-cli/director"
+	fakeui "github.com/stuart-pollock/bosh-cli/ui/fakes"
+	boshtbl "github.com/stuart-pollock/bosh-cli/ui/table"
 )
 
 var _ = Describe("CertificateInfoTable", func() {

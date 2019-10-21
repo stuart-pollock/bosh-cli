@@ -15,9 +15,9 @@ import (
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/ghttp"
 
-	. "github.com/cloudfoundry/bosh-cli/director"
-	fakedir "github.com/cloudfoundry/bosh-cli/director/directorfakes"
-	bio "github.com/cloudfoundry/bosh-cli/io"
+	. "github.com/stuart-pollock/bosh-cli/director"
+	fakedir "github.com/stuart-pollock/bosh-cli/director/directorfakes"
+	bio "github.com/stuart-pollock/bosh-cli/io"
 )
 
 var _ = Describe("ClientRequest", func() {

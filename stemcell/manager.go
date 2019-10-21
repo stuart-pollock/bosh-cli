@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"path/filepath"
 
-	bicloud "github.com/cloudfoundry/bosh-cli/cloud"
-	biconfig "github.com/cloudfoundry/bosh-cli/config"
-	biui "github.com/cloudfoundry/bosh-cli/ui"
+	bicloud "github.com/stuart-pollock/bosh-cli/cloud"
+	biconfig "github.com/stuart-pollock/bosh-cli/config"
+	biui "github.com/stuart-pollock/bosh-cli/ui"
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 )
 

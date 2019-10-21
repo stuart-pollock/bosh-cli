@@ -6,10 +6,10 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	fakecmd "github.com/cloudfoundry/bosh-cli/cmd/cmdfakes"
-	boshdir "github.com/cloudfoundry/bosh-cli/director"
-	fakedir "github.com/cloudfoundry/bosh-cli/director/directorfakes"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	fakecmd "github.com/stuart-pollock/bosh-cli/cmd/cmdfakes"
+	boshdir "github.com/stuart-pollock/bosh-cli/director"
+	fakedir "github.com/stuart-pollock/bosh-cli/director/directorfakes"
 )
 
 var _ = Describe("LogInCmd", func() {

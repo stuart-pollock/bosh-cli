@@ -2,14 +2,14 @@ package cmd
 
 import (
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 
-	bideplmanifest "github.com/cloudfoundry/bosh-cli/deployment/manifest"
-	bidepltpl "github.com/cloudfoundry/bosh-cli/deployment/template"
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
-	birel "github.com/cloudfoundry/bosh-cli/release"
-	birelsetmanifest "github.com/cloudfoundry/bosh-cli/release/set/manifest"
-	biui "github.com/cloudfoundry/bosh-cli/ui"
+	bideplmanifest "github.com/stuart-pollock/bosh-cli/deployment/manifest"
+	bidepltpl "github.com/stuart-pollock/bosh-cli/deployment/template"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
+	birel "github.com/stuart-pollock/bosh-cli/release"
+	birelsetmanifest "github.com/stuart-pollock/bosh-cli/release/set/manifest"
+	biui "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type DeploymentManifestParser interface {

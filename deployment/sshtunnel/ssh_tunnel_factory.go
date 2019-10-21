@@ -1,7 +1,7 @@
 package sshtunnel
 
 import (
-	boshssh "github.com/cloudfoundry/bosh-cli/ssh"
+	boshssh "github.com/stuart-pollock/bosh-cli/ssh"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 )
 

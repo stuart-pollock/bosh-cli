@@ -3,12 +3,12 @@ package template_test
 import (
 	"errors"
 
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/deployment/template"
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
+	. "github.com/stuart-pollock/bosh-cli/deployment/template"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
 	fakesys "github.com/cloudfoundry/bosh-utils/system/fakes"
 )
 

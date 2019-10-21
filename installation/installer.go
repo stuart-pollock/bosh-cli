@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/cloudfoundry/bosh-cli/installation/blobextract"
-	biinstallmanifest "github.com/cloudfoundry/bosh-cli/installation/manifest"
-	biregistry "github.com/cloudfoundry/bosh-cli/registry"
-	biui "github.com/cloudfoundry/bosh-cli/ui"
+	"github.com/stuart-pollock/bosh-cli/installation/blobextract"
+	biinstallmanifest "github.com/stuart-pollock/bosh-cli/installation/manifest"
+	biregistry "github.com/stuart-pollock/bosh-cli/registry"
+	biui "github.com/stuart-pollock/bosh-cli/ui"
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 )

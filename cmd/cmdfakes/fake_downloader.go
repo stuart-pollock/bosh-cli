@@ -4,7 +4,7 @@ package cmdfakes
 import (
 	"sync"
 
-	"github.com/cloudfoundry/bosh-cli/cmd"
+	"github.com/stuart-pollock/bosh-cli/cmd"
 )
 
 type FakeDownloader struct {

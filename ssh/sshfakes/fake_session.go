@@ -4,7 +4,7 @@ package sshfakes
 import (
 	"sync"
 
-	"github.com/cloudfoundry/bosh-cli/ssh"
+	"github.com/stuart-pollock/bosh-cli/ssh"
 )
 
 type FakeSession struct {

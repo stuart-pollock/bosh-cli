@@ -3,7 +3,7 @@ package ui
 import (
 	"github.com/fatih/color"
 
-	. "github.com/cloudfoundry/bosh-cli/ui/table"
+	. "github.com/stuart-pollock/bosh-cli/ui/table"
 )
 
 type ColorUI struct {

@@ -4,9 +4,9 @@ import (
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 	boshsys "github.com/cloudfoundry/bosh-utils/system"
 
-	cmdconf "github.com/cloudfoundry/bosh-cli/cmd/config"
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
-	boshui "github.com/cloudfoundry/bosh-cli/ui"
+	cmdconf "github.com/stuart-pollock/bosh-cli/cmd/config"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
+	boshui "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 func NewSessionFromOpts(

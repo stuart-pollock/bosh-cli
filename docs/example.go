@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	boshdir "github.com/cloudfoundry/bosh-cli/director"
-	boshuaa "github.com/cloudfoundry/bosh-cli/uaa"
+	boshdir "github.com/stuart-pollock/bosh-cli/director"
+	boshuaa "github.com/stuart-pollock/bosh-cli/uaa"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 )
 

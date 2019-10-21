@@ -9,7 +9,7 @@ import (
 	"bytes"
 	"compress/gzip"
 	"errors"
-	. "github.com/cloudfoundry/bosh-cli/director"
+	. "github.com/stuart-pollock/bosh-cli/director"
 )
 
 var _ = Describe("NewFSReleaseArchive", func() {

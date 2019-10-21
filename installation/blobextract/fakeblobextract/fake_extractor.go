@@ -4,7 +4,7 @@ package fakeblobextract
 import (
 	"sync"
 
-	"github.com/cloudfoundry/bosh-cli/installation/blobextract"
+	"github.com/stuart-pollock/bosh-cli/installation/blobextract"
 )
 
 type FakeExtractor struct {

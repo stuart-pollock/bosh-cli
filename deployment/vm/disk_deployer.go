@@ -3,11 +3,11 @@ package vm
 import (
 	"fmt"
 
-	bicloud "github.com/cloudfoundry/bosh-cli/cloud"
-	biconfig "github.com/cloudfoundry/bosh-cli/config"
-	bidisk "github.com/cloudfoundry/bosh-cli/deployment/disk"
-	bideplmanifest "github.com/cloudfoundry/bosh-cli/deployment/manifest"
-	biui "github.com/cloudfoundry/bosh-cli/ui"
+	bicloud "github.com/stuart-pollock/bosh-cli/cloud"
+	biconfig "github.com/stuart-pollock/bosh-cli/config"
+	bidisk "github.com/stuart-pollock/bosh-cli/deployment/disk"
+	bideplmanifest "github.com/stuart-pollock/bosh-cli/deployment/manifest"
+	biui "github.com/stuart-pollock/bosh-cli/ui"
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 )

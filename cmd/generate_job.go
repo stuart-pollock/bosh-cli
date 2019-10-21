@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
-	boshreldir "github.com/cloudfoundry/bosh-cli/releasedir"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
+	boshreldir "github.com/stuart-pollock/bosh-cli/releasedir"
 )
 
 type GenerateJobCmd struct {

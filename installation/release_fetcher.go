@@ -5,10 +5,10 @@ import (
 
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 
-	"github.com/cloudfoundry/bosh-cli/installation/tarball"
-	boshrel "github.com/cloudfoundry/bosh-cli/release"
-	"github.com/cloudfoundry/bosh-cli/release/manifest"
-	"github.com/cloudfoundry/bosh-cli/ui"
+	"github.com/stuart-pollock/bosh-cli/installation/tarball"
+	boshrel "github.com/stuart-pollock/bosh-cli/release"
+	"github.com/stuart-pollock/bosh-cli/release/manifest"
+	"github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type ReleaseFetcher struct {

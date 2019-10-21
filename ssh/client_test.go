@@ -8,7 +8,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/ssh"
+	. "github.com/stuart-pollock/bosh-cli/ssh"
 )
 
 var _ = Describe("ClientConnectRetryStrategy", func() {

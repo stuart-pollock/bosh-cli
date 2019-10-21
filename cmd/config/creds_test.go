@@ -4,7 +4,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd/config"
+	. "github.com/stuart-pollock/bosh-cli/cmd/config"
 )
 
 var _ = Describe("Creds", func() {

@@ -1,12 +1,12 @@
 package fakes
 
 import (
-	bicloud "github.com/cloudfoundry/bosh-cli/cloud"
-	bideplmanifest "github.com/cloudfoundry/bosh-cli/deployment/manifest"
-	bisshtunnel "github.com/cloudfoundry/bosh-cli/deployment/sshtunnel"
-	bivm "github.com/cloudfoundry/bosh-cli/deployment/vm"
-	bistemcell "github.com/cloudfoundry/bosh-cli/stemcell"
-	biui "github.com/cloudfoundry/bosh-cli/ui"
+	bicloud "github.com/stuart-pollock/bosh-cli/cloud"
+	bideplmanifest "github.com/stuart-pollock/bosh-cli/deployment/manifest"
+	bisshtunnel "github.com/stuart-pollock/bosh-cli/deployment/sshtunnel"
+	bivm "github.com/stuart-pollock/bosh-cli/deployment/vm"
+	bistemcell "github.com/stuart-pollock/bosh-cli/stemcell"
+	biui "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type FakeVMDeployer struct {

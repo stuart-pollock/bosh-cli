@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"strings"
 
-	boshjobman "github.com/cloudfoundry/bosh-cli/release/job/manifest"
-	. "github.com/cloudfoundry/bosh-cli/release/resource"
+	boshjobman "github.com/stuart-pollock/bosh-cli/release/job/manifest"
+	. "github.com/stuart-pollock/bosh-cli/release/resource"
 )
 
 type DirReaderImpl struct {

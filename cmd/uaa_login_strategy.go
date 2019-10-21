@@ -3,9 +3,9 @@ package cmd
 import (
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 
-	cmdconf "github.com/cloudfoundry/bosh-cli/cmd/config"
-	boshuaa "github.com/cloudfoundry/bosh-cli/uaa"
-	boshui "github.com/cloudfoundry/bosh-cli/ui"
+	cmdconf "github.com/stuart-pollock/bosh-cli/cmd/config"
+	boshuaa "github.com/stuart-pollock/bosh-cli/uaa"
+	boshui "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type UAALoginStrategy struct {

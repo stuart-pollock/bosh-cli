@@ -4,11 +4,11 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	cmdconf "github.com/cloudfoundry/bosh-cli/cmd/config"
-	fakecmdconf "github.com/cloudfoundry/bosh-cli/cmd/config/configfakes"
-	fakeui "github.com/cloudfoundry/bosh-cli/ui/fakes"
-	boshtbl "github.com/cloudfoundry/bosh-cli/ui/table"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	cmdconf "github.com/stuart-pollock/bosh-cli/cmd/config"
+	fakecmdconf "github.com/stuart-pollock/bosh-cli/cmd/config/configfakes"
+	fakeui "github.com/stuart-pollock/bosh-cli/ui/fakes"
+	boshtbl "github.com/stuart-pollock/bosh-cli/ui/table"
 )
 
 var _ = Describe("EnvironmentsCmd", func() {

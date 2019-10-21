@@ -7,14 +7,14 @@ import (
 	biproperty "github.com/cloudfoundry/bosh-utils/property"
 	fakesys "github.com/cloudfoundry/bosh-utils/system/fakes"
 	fakeuuid "github.com/cloudfoundry/bosh-utils/uuid/fakes"
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
-	"github.com/cloudfoundry/bosh-cli/installation/manifest"
-	"github.com/cloudfoundry/bosh-cli/installation/manifest/fakes"
-	birelsetmanifest "github.com/cloudfoundry/bosh-cli/release/set/manifest"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
+	"github.com/stuart-pollock/bosh-cli/installation/manifest"
+	"github.com/stuart-pollock/bosh-cli/installation/manifest/fakes"
+	birelsetmanifest "github.com/stuart-pollock/bosh-cli/release/set/manifest"
 )
 
 type manifestFixtures struct {

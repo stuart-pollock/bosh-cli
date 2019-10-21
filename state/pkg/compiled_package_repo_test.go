@@ -6,9 +6,9 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	biindex "github.com/cloudfoundry/bosh-cli/index"
-	boshrelpkg "github.com/cloudfoundry/bosh-cli/release/pkg"
-	. "github.com/cloudfoundry/bosh-cli/state/pkg"
+	biindex "github.com/stuart-pollock/bosh-cli/index"
+	boshrelpkg "github.com/stuart-pollock/bosh-cli/release/pkg"
+	. "github.com/stuart-pollock/bosh-cli/state/pkg"
 	fakesys "github.com/cloudfoundry/bosh-utils/system/fakes"
 )
 

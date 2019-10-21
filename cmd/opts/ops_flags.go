@@ -1,7 +1,7 @@
 package opts
 
 import (
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 )
 
 // Shared

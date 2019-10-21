@@ -9,7 +9,7 @@ stemcell_sha1=07a7dad0968b61e10daa613de23465de4af7a02f
 if [ ! -z ${BOSH_INIT_CPI_RELEASE_URL+x} ]; then
   cpi_release_url=$BOSH_INIT_CPI_RELEASE_URL
 else
-  cpi_release_url=https://bosh.io/d/github.com/cppforlife/bosh-warden-cpi-release?v=$cpi_release_version
+  cpi_release_url=https://bosh.io/d/github.com/stuart-pollock/bosh-warden-cpi-release?v=$cpi_release_version
 fi
 
 if [ ! -z ${BOSH_INIT_CPI_RELEASE_SHA1+x} ]; then

@@ -1,11 +1,11 @@
 package fakes
 
 import (
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
-	biinstallmanifest "github.com/cloudfoundry/bosh-cli/installation/manifest"
-	birelsetmanifest "github.com/cloudfoundry/bosh-cli/release/set/manifest"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
+	biinstallmanifest "github.com/stuart-pollock/bosh-cli/installation/manifest"
+	birelsetmanifest "github.com/stuart-pollock/bosh-cli/release/set/manifest"
 )
 
 type FakeParser struct {

@@ -8,7 +8,7 @@ import (
 	// Should only be imported here to avoid leaking use of goflags through project
 	goflags "github.com/jessevdk/go-flags"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
 )
 
 type Factory struct {

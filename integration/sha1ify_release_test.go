@@ -7,10 +7,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	boshrel "github.com/cloudfoundry/bosh-cli/release"
-	boshui "github.com/cloudfoundry/bosh-cli/ui"
-	fakeui "github.com/cloudfoundry/bosh-cli/ui/fakes"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	boshrel "github.com/stuart-pollock/bosh-cli/release"
+	boshui "github.com/stuart-pollock/bosh-cli/ui"
+	fakeui "github.com/stuart-pollock/bosh-cli/ui/fakes"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 	boshsys "github.com/cloudfoundry/bosh-utils/system"
 )

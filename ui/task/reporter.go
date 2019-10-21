@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	boshui "github.com/cloudfoundry/bosh-cli/ui"
+	boshui "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type ReporterImpl struct {

@@ -4,7 +4,7 @@ import (
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 
-	boshrel "github.com/cloudfoundry/bosh-cli/release"
+	boshrel "github.com/stuart-pollock/bosh-cli/release"
 )
 
 type ReleaseManager interface {

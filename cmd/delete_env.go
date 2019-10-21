@@ -1,11 +1,11 @@
 package cmd
 
 import (
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
-	boshui "github.com/cloudfoundry/bosh-cli/ui"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
+	boshui "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type DeleteEnvCmd struct {

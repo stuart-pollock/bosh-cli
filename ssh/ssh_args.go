@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	boshdir "github.com/cloudfoundry/bosh-cli/director"
+	boshdir "github.com/stuart-pollock/bosh-cli/director"
 	boshhttp "github.com/cloudfoundry/bosh-utils/httpclient"
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 	boshsys "github.com/cloudfoundry/bosh-utils/system"

@@ -2,12 +2,12 @@ package deployment
 
 import (
 	biagentclient "github.com/cloudfoundry/bosh-agent/agentclient"
-	biblobstore "github.com/cloudfoundry/bosh-cli/blobstore"
-	bicloud "github.com/cloudfoundry/bosh-cli/cloud"
-	bidisk "github.com/cloudfoundry/bosh-cli/deployment/disk"
-	biinstance "github.com/cloudfoundry/bosh-cli/deployment/instance"
-	bivm "github.com/cloudfoundry/bosh-cli/deployment/vm"
-	bistemcell "github.com/cloudfoundry/bosh-cli/stemcell"
+	biblobstore "github.com/stuart-pollock/bosh-cli/blobstore"
+	bicloud "github.com/stuart-pollock/bosh-cli/cloud"
+	bidisk "github.com/stuart-pollock/bosh-cli/deployment/disk"
+	biinstance "github.com/stuart-pollock/bosh-cli/deployment/instance"
+	bivm "github.com/stuart-pollock/bosh-cli/deployment/vm"
+	bistemcell "github.com/stuart-pollock/bosh-cli/stemcell"
 )
 
 type ManagerFactory interface {

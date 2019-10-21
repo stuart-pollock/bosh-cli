@@ -8,8 +8,8 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	boshdir "github.com/cloudfoundry/bosh-cli/director"
-	. "github.com/cloudfoundry/bosh-cli/ssh"
+	boshdir "github.com/stuart-pollock/bosh-cli/director"
+	. "github.com/stuart-pollock/bosh-cli/ssh"
 )
 
 var _ = Describe("SessionImpl", func() {

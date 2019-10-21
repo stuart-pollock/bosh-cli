@@ -9,8 +9,8 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
 )
 
 var _ = Describe("VarsFSStore", func() {

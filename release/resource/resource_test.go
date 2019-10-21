@@ -6,9 +6,9 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/cloudfoundry/bosh-cli/crypto/fakes"
-	. "github.com/cloudfoundry/bosh-cli/release/resource"
-	fakeres "github.com/cloudfoundry/bosh-cli/release/resource/resourcefakes"
+	"github.com/stuart-pollock/bosh-cli/crypto/fakes"
+	. "github.com/stuart-pollock/bosh-cli/release/resource"
+	fakeres "github.com/stuart-pollock/bosh-cli/release/resource/resourcefakes"
 	boshcrypto "github.com/cloudfoundry/bosh-utils/crypto"
 	fakesfs "github.com/cloudfoundry/bosh-utils/system/fakes"
 )

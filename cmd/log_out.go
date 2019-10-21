@@ -3,8 +3,8 @@ package cmd
 import (
 	"errors"
 
-	cmdconf "github.com/cloudfoundry/bosh-cli/cmd/config"
-	biui "github.com/cloudfoundry/bosh-cli/ui"
+	cmdconf "github.com/stuart-pollock/bosh-cli/cmd/config"
+	biui "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type LogOutCmd struct {

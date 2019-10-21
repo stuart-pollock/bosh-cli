@@ -5,7 +5,7 @@ import (
 
 	"os"
 
-	"github.com/cloudfoundry/bosh-cli/crypto"
+	"github.com/stuart-pollock/bosh-cli/crypto"
 	crypto2 "github.com/cloudfoundry/bosh-utils/crypto"
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 )

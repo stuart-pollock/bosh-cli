@@ -5,7 +5,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/release/manifest"
+	. "github.com/stuart-pollock/bosh-cli/release/manifest"
 )
 
 var _ = Describe("NewManifestFromPath", func() {

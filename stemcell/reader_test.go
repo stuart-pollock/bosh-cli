@@ -2,7 +2,7 @@ package stemcell_test
 
 import (
 	"errors"
-	. "github.com/cloudfoundry/bosh-cli/stemcell"
+	. "github.com/stuart-pollock/bosh-cli/stemcell"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 

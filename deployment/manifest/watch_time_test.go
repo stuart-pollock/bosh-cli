@@ -1,7 +1,7 @@
 package manifest_test
 
 import (
-	. "github.com/cloudfoundry/bosh-cli/deployment/manifest"
+	. "github.com/stuart-pollock/bosh-cli/deployment/manifest"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

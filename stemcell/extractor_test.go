@@ -3,11 +3,11 @@ package stemcell_test
 import (
 	"errors"
 
-	. "github.com/cloudfoundry/bosh-cli/stemcell"
+	. "github.com/stuart-pollock/bosh-cli/stemcell"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	fakebistemcell "github.com/cloudfoundry/bosh-cli/stemcell/stemcellfakes"
+	fakebistemcell "github.com/stuart-pollock/bosh-cli/stemcell/stemcellfakes"
 	biproperty "github.com/cloudfoundry/bosh-utils/property"
 	fakesys "github.com/cloudfoundry/bosh-utils/system/fakes"
 )

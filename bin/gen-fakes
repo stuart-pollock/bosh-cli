@@ -70,4 +70,4 @@ counterfeiter ssh Session
 
 counterfeiter ui/task Reporter
 
-$bin/go fmt $($bin/go list github.com/cloudfoundry/bosh-cli/... | grep -v /vendor/)
+$bin/go fmt $($bin/go list github.com/stuart-pollock/bosh-cli/... | grep -v /vendor/)

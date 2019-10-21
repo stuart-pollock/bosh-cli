@@ -5,9 +5,9 @@ import (
 	biproperty "github.com/cloudfoundry/bosh-utils/property"
 	boshsys "github.com/cloudfoundry/bosh-utils/system"
 
-	"github.com/cloudfoundry/bosh-cli/crypto"
-	boshpkg "github.com/cloudfoundry/bosh-cli/release/pkg"
-	. "github.com/cloudfoundry/bosh-cli/release/resource"
+	"github.com/stuart-pollock/bosh-cli/crypto"
+	boshpkg "github.com/stuart-pollock/bosh-cli/release/pkg"
+	. "github.com/stuart-pollock/bosh-cli/release/resource"
 	crypto2 "github.com/cloudfoundry/bosh-utils/crypto"
 )
 

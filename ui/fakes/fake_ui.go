@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	. "github.com/cloudfoundry/bosh-cli/ui/table"
+	. "github.com/stuart-pollock/bosh-cli/ui/table"
 )
 
 type FakeUI struct {

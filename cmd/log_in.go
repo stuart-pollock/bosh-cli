@@ -3,7 +3,7 @@ package cmd
 import (
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 
-	boshdir "github.com/cloudfoundry/bosh-cli/director"
+	boshdir "github.com/stuart-pollock/bosh-cli/director"
 )
 
 //go:generate counterfeiter . LoginStrategy

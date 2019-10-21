@@ -9,9 +9,9 @@ image_resource:
 
 inputs:
 - name: bosh-cli
-  path: gopath/src/github.com/cloudfoundry/bosh-cli
+  path: gopath/src/github.com/stuart-pollock/bosh-cli
 - name: alpha-release-bucket-linux
 
 
 run:
-  path: gopath/src/github.com/cloudfoundry/bosh-cli/ci/tasks/test-helper-urls.sh
+  path: gopath/src/github.com/stuart-pollock/bosh-cli/ci/tasks/test-helper-urls.sh

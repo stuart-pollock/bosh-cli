@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	biui "github.com/cloudfoundry/bosh-cli/ui"
+	biui "github.com/stuart-pollock/bosh-cli/ui"
 	boshcrypto "github.com/cloudfoundry/bosh-utils/crypto"
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 	"github.com/cloudfoundry/bosh-utils/httpclient"

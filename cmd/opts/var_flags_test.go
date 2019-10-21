@@ -8,8 +8,8 @@ import (
 	. "github.com/onsi/gomega"
 	"gopkg.in/yaml.v2"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
-	. "github.com/cloudfoundry/bosh-cli/director/template"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
+	. "github.com/stuart-pollock/bosh-cli/director/template"
 )
 
 var _ = Describe("VarFlags", func() {

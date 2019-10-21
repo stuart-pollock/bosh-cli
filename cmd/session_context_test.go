@@ -5,10 +5,10 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	cmdconf "github.com/cloudfoundry/bosh-cli/cmd/config"
-	fakeconf "github.com/cloudfoundry/bosh-cli/cmd/config/configfakes"
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	cmdconf "github.com/stuart-pollock/bosh-cli/cmd/config"
+	fakeconf "github.com/stuart-pollock/bosh-cli/cmd/config/configfakes"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
 )
 
 var _ = Describe("SessionContextImpl", func() {

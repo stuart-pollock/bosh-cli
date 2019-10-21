@@ -11,14 +11,14 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/release"
-	boshjob "github.com/cloudfoundry/bosh-cli/release/job"
-	fakejob "github.com/cloudfoundry/bosh-cli/release/job/jobfakes"
-	boshlic "github.com/cloudfoundry/bosh-cli/release/license"
-	boshman "github.com/cloudfoundry/bosh-cli/release/manifest"
-	boshpkg "github.com/cloudfoundry/bosh-cli/release/pkg"
-	fakepkg "github.com/cloudfoundry/bosh-cli/release/pkg/pkgfakes"
-	. "github.com/cloudfoundry/bosh-cli/release/resource"
+	. "github.com/stuart-pollock/bosh-cli/release"
+	boshjob "github.com/stuart-pollock/bosh-cli/release/job"
+	fakejob "github.com/stuart-pollock/bosh-cli/release/job/jobfakes"
+	boshlic "github.com/stuart-pollock/bosh-cli/release/license"
+	boshman "github.com/stuart-pollock/bosh-cli/release/manifest"
+	boshpkg "github.com/stuart-pollock/bosh-cli/release/pkg"
+	fakepkg "github.com/stuart-pollock/bosh-cli/release/pkg/pkgfakes"
+	. "github.com/stuart-pollock/bosh-cli/release/resource"
 )
 
 var _ = Describe("ArchiveReader", func() {

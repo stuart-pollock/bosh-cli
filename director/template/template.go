@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 	"gopkg.in/yaml.v2"
 )
 

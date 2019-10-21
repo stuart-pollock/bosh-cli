@@ -3,10 +3,10 @@ package cmd
 import (
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd/opts"
-	boshdir "github.com/cloudfoundry/bosh-cli/director"
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
-	boshui "github.com/cloudfoundry/bosh-cli/ui"
+	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
+	boshdir "github.com/stuart-pollock/bosh-cli/director"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
+	boshui "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type DeployCmd struct {

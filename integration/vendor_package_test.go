@@ -7,16 +7,16 @@ import (
 
 	boshlog "github.com/cloudfoundry/bosh-utils/logger"
 	boshsys "github.com/cloudfoundry/bosh-utils/system"
-	"github.com/cppforlife/go-patch/patch"
+	"github.com/stuart-pollock/go-patch/patch"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/cmd"
-	boshtpl "github.com/cloudfoundry/bosh-cli/director/template"
-	boshrel "github.com/cloudfoundry/bosh-cli/release"
-	boshpkg "github.com/cloudfoundry/bosh-cli/release/pkg"
-	boshui "github.com/cloudfoundry/bosh-cli/ui"
-	fakeui "github.com/cloudfoundry/bosh-cli/ui/fakes"
+	. "github.com/stuart-pollock/bosh-cli/cmd"
+	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
+	boshrel "github.com/stuart-pollock/bosh-cli/release"
+	boshpkg "github.com/stuart-pollock/bosh-cli/release/pkg"
+	boshui "github.com/stuart-pollock/bosh-cli/ui"
+	fakeui "github.com/stuart-pollock/bosh-cli/ui/fakes"
 )
 
 var _ = Describe("vendor-package command", func() {

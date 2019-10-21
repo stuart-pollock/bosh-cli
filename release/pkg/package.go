@@ -4,8 +4,8 @@ import (
 	bosherr "github.com/cloudfoundry/bosh-utils/errors"
 	boshsys "github.com/cloudfoundry/bosh-utils/system"
 
-	"github.com/cloudfoundry/bosh-cli/crypto"
-	. "github.com/cloudfoundry/bosh-cli/release/resource"
+	"github.com/stuart-pollock/bosh-cli/crypto"
+	. "github.com/stuart-pollock/bosh-cli/release/resource"
 	crypto2 "github.com/cloudfoundry/bosh-utils/crypto"
 )
 

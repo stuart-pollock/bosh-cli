@@ -8,7 +8,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry/bosh-cli/crypto"
+	. "github.com/stuart-pollock/bosh-cli/crypto"
 
 	boshcrypto "github.com/cloudfoundry/bosh-utils/crypto"
 )

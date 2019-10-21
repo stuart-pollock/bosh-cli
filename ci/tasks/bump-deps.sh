@@ -5,11 +5,11 @@ set -e
 git clone bosh-cli bumped-bosh-cli
 
 mkdir -p workspace/src/github.com/cloudfoundry/
-ln -s $PWD/bumped-bosh-cli workspace/src/github.com/cloudfoundry/bosh-cli
+ln -s $PWD/bumped-bosh-cli workspace/src/github.com/stuart-pollock/bosh-cli
 
 export GOPATH=$PWD/workspace
 
-cd workspace/src/github.com/cloudfoundry/bosh-cli
+cd workspace/src/github.com/stuart-pollock/bosh-cli
 
 dep ensure -v -update
 
