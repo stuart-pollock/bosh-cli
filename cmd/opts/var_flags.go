@@ -1,18 +1,15 @@
 package opts
 
 import (
-	cfgtypes "github.com/cloudfoundry/config-server/types"
-
 	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
 )
 
 // Shared
 type VarFlags struct {
-	VarKVs      []boshtpl.VarKV       `long:"var"        short:"v" value-name:"VAR=VALUE" description:"Set variable"`
-	VarFiles    []boshtpl.VarFileArg  `long:"var-file"             value-name:"VAR=PATH"  description:"Set variable to file contents"`
-	VarsFiles   []boshtpl.VarsFileArg `long:"vars-file"  short:"l" value-name:"PATH"      description:"Load variables from a YAML file"`
-	VarsEnvs    []boshtpl.VarsEnvArg  `long:"vars-env"             value-name:"PREFIX"    description:"Load variables from environment variables (e.g.: 'MY' to load MY_var=value)"`
-	VarsFSStore VarsFSStore           `long:"vars-store"           value-name:"PATH"      description:"Load/save variables from/to a YAML file"`
+	VarKVs    []boshtpl.VarKV       `long:"var"        short:"v" value-name:"VAR=VALUE" description:"Set variable"`
+	VarFiles  []boshtpl.VarFileArg  `long:"var-file"             value-name:"VAR=PATH"  description:"Set variable to file contents"`
+	VarsFiles []boshtpl.VarsFileArg `long:"vars-file"  short:"l" value-name:"PATH"      description:"Load variables from a YAML file"`
+	VarsEnvs  []boshtpl.VarsEnvArg  `long:"vars-env"             value-name:"PREFIX"    description:"Load variables from environment variables (e.g.: 'MY' to load MY_var=value)"`
 }
 
 func (f VarFlags) AsVariables() boshtpl.Variables {
@@ -44,17 +41,7 @@ func (f VarFlags) AsVariables() boshtpl.Variables {
 
 	firstToUse = append(firstToUse, staticVars)
 
-	store := &f.VarsFSStore
-
-	if f.VarsFSStore.IsSet() {
-		firstToUse = append(firstToUse, store)
-	}
-
 	vars := boshtpl.NewMultiVars(firstToUse)
-
-	if f.VarsFSStore.IsSet() {
-		store.ValueGeneratorFactory = cfgtypes.NewValueGeneratorConcrete(NewVarsCertLoader(vars))
-	}
 
 	return vars
 }
