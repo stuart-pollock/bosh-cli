@@ -125,8 +125,7 @@ var _ = Describe("Factory", func() {
 
 	Describe("global options", func() {
 		clearNonGlobalOpts := func(boshOpts BoshOpts) BoshOpts {
-			boshOpts.VersionOpt = nil   // can't compare functions
-			boshOpts.CACertOpt.FS = nil // fs is populated by factory.New
+			boshOpts.VersionOpt = nil // can't compare functions
 			boshOpts.Interpolate = InterpolateOpts{}
 			return boshOpts
 		}
