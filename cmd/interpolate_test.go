@@ -1,13 +1,13 @@
 package cmd_test
 
 import (
-	"github.com/stuart-pollock/go-patch/patch"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+	"github.com/stuart-pollock/go-patch/patch"
 
 	. "github.com/stuart-pollock/bosh-cli/cmd"
 	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
-	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
+	"github.com/stuart-pollock/bosh-cli/director/template"
 	fakeui "github.com/stuart-pollock/bosh-cli/ui/fakes"
 )
 
@@ -38,13 +38,13 @@ var _ = Describe("InterpolateCmd", func() {
 				Bytes: []byte("name1: ((name1))\nname2: ((name2))"),
 			}
 
-			opts.VarKVs = []boshtpl.VarKV{
+			opts.VarKVs = []template.VarKV{
 				{Name: "name1", Value: "val1-from-kv"},
 			}
 
-			opts.VarsFiles = []boshtpl.VarsFileArg{
-				{Vars: boshtpl.StaticVariables(map[string]interface{}{"name1": "val1-from-file"})},
-				{Vars: boshtpl.StaticVariables(map[string]interface{}{"name2": "val2-from-file"})},
+			opts.VarsFiles = []template.VarsFileArg{
+				{Vars: template.StaticVariables(map[string]interface{}{"name1": "val1-from-file"})},
+				{Vars: template.StaticVariables(map[string]interface{}{"name2": "val2-from-file"})},
 			}
 
 			opts.OpsFiles = []OpsFileArg{
@@ -67,13 +67,13 @@ var _ = Describe("InterpolateCmd", func() {
 				Bytes: []byte("name1: ((name1))\nname2: ((name2))"),
 			}
 
-			opts.VarKVs = []boshtpl.VarKV{
+			opts.VarKVs = []template.VarKV{
 				{Name: "name1", Value: "val1-from-kv"},
 			}
 
-			opts.VarsFiles = []boshtpl.VarsFileArg{
+			opts.VarsFiles = []template.VarsFileArg{
 				{
-					Vars: boshtpl.StaticVariables(map[string]interface{}{
+					Vars: template.StaticVariables(map[string]interface{}{
 						"var": map[interface{}]interface{}{"name3": "var-val"},
 					}),
 				},
@@ -123,7 +123,7 @@ var _ = Describe("InterpolateCmd", func() {
 				Bytes: []byte("name1: ((name1))\nname2: ((name2))"),
 			}
 
-			opts.VarKVs = []boshtpl.VarKV{
+			opts.VarKVs = []template.VarKV{
 				{Name: "name1", Value: "val1-from-kv"},
 			}
 
@@ -139,7 +139,7 @@ var _ = Describe("InterpolateCmd", func() {
 				Bytes: []byte("name1: ((name1))\nname2: ((name2))"),
 			}
 
-			opts.VarKVs = []boshtpl.VarKV{
+			opts.VarKVs = []template.VarKV{
 				{Name: "name3", Value: "val3-from-kv"},
 			}
 

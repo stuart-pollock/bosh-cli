@@ -4,30 +4,30 @@ import (
 	"io/ioutil"
 	"os"
 
-	bosherr "github.com/cloudfoundry/bosh-utils/errors"
-	boshlog "github.com/cloudfoundry/bosh-utils/logger"
-	boshsys "github.com/cloudfoundry/bosh-utils/system"
+	"github.com/cloudfoundry/bosh-utils/errors"
+	"github.com/cloudfoundry/bosh-utils/logger"
+	"github.com/cloudfoundry/bosh-utils/system"
 )
 
 type FileBytesArg struct {
-	FS boshsys.FileSystem
+	FS system.FileSystem
 
 	Bytes []byte
 }
 
 func (a *FileBytesArg) UnmarshalFlag(data string) error {
 	if a.FS == nil {
-		a.FS = boshsys.NewOsFileSystemWithStrictTempRoot(boshlog.NewLogger(boshlog.LevelNone))
+		a.FS = system.NewOsFileSystemWithStrictTempRoot(logger.NewLogger(logger.LevelNone))
 	}
 
 	if len(data) == 0 {
-		return bosherr.Errorf("Expected file path to be non-empty")
+		return errors.Errorf("Expected file path to be non-empty")
 	}
 
 	if data == "-" {
 		bs, err := ioutil.ReadAll(os.Stdin)
 		if err != nil {
-			return bosherr.WrapErrorf(err, "Reading from stdin")
+			return errors.WrapErrorf(err, "Reading from stdin")
 		}
 
 		(*a).Bytes = bs
@@ -37,7 +37,7 @@ func (a *FileBytesArg) UnmarshalFlag(data string) error {
 
 	absPath, err := a.FS.ExpandPath(data)
 	if err != nil {
-		return bosherr.WrapErrorf(err, "Getting absolute path '%s'", data)
+		return errors.WrapErrorf(err, "Getting absolute path '%s'", data)
 	}
 
 	bytes, err := a.FS.ReadFile(absPath)

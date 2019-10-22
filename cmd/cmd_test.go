@@ -3,36 +3,36 @@ package cmd_test
 import (
 	"errors"
 
-	boshlog "github.com/cloudfoundry/bosh-utils/logger"
+	"github.com/cloudfoundry/bosh-utils/logger"
 	fakesys "github.com/cloudfoundry/bosh-utils/system/fakes"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
 	. "github.com/stuart-pollock/bosh-cli/cmd"
 	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
-	boshui "github.com/stuart-pollock/bosh-cli/ui"
+	"github.com/stuart-pollock/bosh-cli/ui"
 	fakeui "github.com/stuart-pollock/bosh-cli/ui/fakes"
-	boshtbl "github.com/stuart-pollock/bosh-cli/ui/table"
+	"github.com/stuart-pollock/bosh-cli/ui/table"
 )
 
 var _ = Describe("Cmd", func() {
 	var (
-		ui     *fakeui.FakeUI
-		confUI *boshui.ConfUI
+		fakeUI *fakeui.FakeUI
+		confUI *ui.ConfUI
 		fs     *fakesys.FakeFileSystem
 		cmd    Cmd
 	)
 
 	BeforeEach(func() {
-		ui = &fakeui.FakeUI{}
-		logger := boshlog.NewLogger(boshlog.LevelNone)
-		confUI = boshui.NewWrappingConfUI(ui, logger)
+		fakeUI = &fakeui.FakeUI{}
+		log := logger.NewLogger(logger.LevelNone)
+		confUI = ui.NewWrappingConfUI(fakeUI, log)
 
 		fs = fakesys.NewFakeFileSystem()
 
-		deps := NewBasicDeps(confUI, logger)
+		deps := NewBasicDeps(confUI, log)
 
-		cmd = NewCmd(BoshOpts{}, nil, deps)
+		cmd = NewCmd(MainOpts{}, nil, deps)
 	})
 
 	Describe("Execute", func() {
@@ -42,7 +42,7 @@ var _ = Describe("Cmd", func() {
 			err := cmd.Execute()
 			Expect(err).ToNot(HaveOccurred())
 
-			Expect(ui.Blocks).To(Equal([]string{"null\n"}))
+			Expect(fakeUI.Blocks).To(Equal([]string{"null\n"}))
 		})
 
 		It("prints message if specified", func() {
@@ -51,11 +51,11 @@ var _ = Describe("Cmd", func() {
 			err := cmd.Execute()
 			Expect(err).ToNot(HaveOccurred())
 
-			Expect(ui.Blocks).To(Equal([]string{"output"}))
+			Expect(fakeUI.Blocks).To(Equal([]string{"output"}))
 		})
 
 		It("allows to enable json output", func() {
-			cmd.BoshOpts = BoshOpts{JSONOpt: true}
+			cmd.MainOpts = MainOpts{JSONOpt: true}
 			cmd.Opts = &InterpolateOpts{}
 
 			err := cmd.Execute()
@@ -63,7 +63,7 @@ var _ = Describe("Cmd", func() {
 
 			confUI.Flush()
 
-			Expect(ui.Blocks[0]).To(ContainSubstring(`Blocks": [`))
+			Expect(fakeUI.Blocks[0]).To(ContainSubstring(`Blocks": [`))
 		})
 
 		Describe("color", func() {
@@ -72,27 +72,27 @@ var _ = Describe("Cmd", func() {
 				Expect(err).ToNot(HaveOccurred())
 
 				// Tables have emboldened header values
-				confUI.PrintTable(boshtbl.Table{Header: []boshtbl.Header{boshtbl.NewHeader("State")}})
+				confUI.PrintTable(table.Table{Header: []table.Header{table.NewHeader("State")}})
 			}
 
 			It("has color in the output enabled by default", func() {
-				cmd.BoshOpts = BoshOpts{}
+				cmd.MainOpts = MainOpts{}
 				cmd.Opts = &InterpolateOpts{}
 
 				executeCmdAndPrintTable()
 
 				// Expect that header values are bold
-				Expect(ui.Tables[0].HeaderFormatFunc).ToNot(BeNil())
+				Expect(fakeUI.Tables[0].HeaderFormatFunc).ToNot(BeNil())
 			})
 
 			It("allows to disable color in the output", func() {
-				cmd.BoshOpts = BoshOpts{NoColorOpt: true}
+				cmd.MainOpts = MainOpts{NoColorOpt: true}
 				cmd.Opts = &InterpolateOpts{}
 
 				executeCmdAndPrintTable()
 
 				// Expect that header values are empty because they were not emboldened
-				Expect(ui.Tables[0].HeaderFormatFunc).To(BeNil())
+				Expect(fakeUI.Tables[0].HeaderFormatFunc).To(BeNil())
 			})
 		})
 

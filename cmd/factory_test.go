@@ -3,14 +3,14 @@ package cmd_test
 import (
 	"io/ioutil"
 
-	boshlog "github.com/cloudfoundry/bosh-utils/logger"
+	"github.com/cloudfoundry/bosh-utils/logger"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/ginkgo/extensions/table"
 	. "github.com/onsi/gomega"
 
 	. "github.com/stuart-pollock/bosh-cli/cmd"
 	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
-	boshui "github.com/stuart-pollock/bosh-cli/ui"
+	"github.com/stuart-pollock/bosh-cli/ui"
 )
 
 // This placeholder is used for replacing arguments in the table test with the
@@ -24,17 +24,17 @@ var _ = Describe("Factory", func() {
 	)
 
 	BeforeEach(func() {
-		logger := boshlog.NewLogger(boshlog.LevelNone)
+		log := logger.NewLogger(logger.LevelNone)
 
 		f, err := ioutil.TempFile("", "file")
 		Expect(err).NotTo(HaveOccurred())
 
 		tmpFile = f.Name()
 
-		ui := boshui.NewConfUI(logger)
-		defer ui.Flush()
+		myUi := ui.NewConfUI(log)
+		defer myUi.Flush()
 
-		deps := NewBasicDeps(ui, logger)
+		deps := NewBasicDeps(myUi, log)
 
 		factory = NewFactory(deps)
 	})
@@ -124,22 +124,11 @@ var _ = Describe("Factory", func() {
 	})
 
 	Describe("global options", func() {
-		clearNonGlobalOpts := func(boshOpts BoshOpts) BoshOpts {
-			boshOpts.VersionOpt = nil // can't compare functions
-			boshOpts.Interpolate = InterpolateOpts{}
-			return boshOpts
+		clearNonGlobalOpts := func(opts MainOpts) MainOpts {
+			opts.VersionOpt = nil // can't compare functions
+			opts.Interpolate = InterpolateOpts{}
+			return opts
 		}
-
-		It("has set of default options", func() {
-			cmd, err := factory.New([]string{"locks"})
-			Expect(err).ToNot(HaveOccurred())
-
-			// Check against entire BoshOpts to avoid future missing assertions
-			Expect(clearNonGlobalOpts(cmd.BoshOpts)).To(Equal(BoshOpts{
-				ConfigPathOpt: "~/.bosh/config",
-				Parallel:      5,
-			}))
-		})
 
 		It("can set variety of options", func() {
 			opts := []string{
@@ -150,9 +139,8 @@ var _ = Describe("Factory", func() {
 			cmd, err := factory.New(opts)
 			Expect(err).ToNot(HaveOccurred())
 
-			Expect(clearNonGlobalOpts(cmd.BoshOpts)).To(Equal(BoshOpts{
-				ConfigPathOpt: "config",
-				JSONOpt:       true,
+			Expect(clearNonGlobalOpts(cmd.MainOpts)).To(Equal(MainOpts{
+				JSONOpt: true,
 			}))
 		})
 

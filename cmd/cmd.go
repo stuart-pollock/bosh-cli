@@ -4,18 +4,18 @@ import (
 	"fmt"
 
 	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
-	boshtbl "github.com/stuart-pollock/bosh-cli/ui/table"
+	"github.com/stuart-pollock/bosh-cli/ui/table"
 )
 
 type Cmd struct {
-	BoshOpts BoshOpts
+	MainOpts MainOpts
 	Opts     interface{}
 
 	deps BasicDeps
 }
 
-func NewCmd(boshOpts BoshOpts, opts interface{}, deps BasicDeps) Cmd {
-	return Cmd{boshOpts, opts, deps}
+func NewCmd(mainOpts MainOpts, opts interface{}, deps BasicDeps) Cmd {
+	return Cmd{mainOpts, opts, deps}
 }
 
 type cmdConveniencePanic struct {
@@ -47,23 +47,23 @@ func (c Cmd) Execute() (cmdErr error) {
 	}
 }
 func (c Cmd) configureUI() {
-	c.deps.UI.EnableTTY(c.BoshOpts.TTYOpt)
+	c.deps.UI.EnableTTY(c.MainOpts.TTYOpt)
 
-	if !c.BoshOpts.NoColorOpt {
+	if !c.MainOpts.NoColorOpt {
 		c.deps.UI.EnableColor()
 	}
 
-	if c.BoshOpts.JSONOpt {
+	if c.MainOpts.JSONOpt {
 		c.deps.UI.EnableJSON()
 	}
 
-	if c.BoshOpts.NonInteractiveOpt {
+	if c.MainOpts.NonInteractiveOpt {
 		c.deps.UI.EnableNonInteractive()
 	}
 
-	if len(c.BoshOpts.ColumnOpt) > 0 {
-		headers := []boshtbl.Header{}
-		for _, columnOpt := range c.BoshOpts.ColumnOpt {
+	if len(c.MainOpts.ColumnOpt) > 0 {
+		headers := []table.Header{}
+		for _, columnOpt := range c.MainOpts.ColumnOpt {
 			headers = append(headers, columnOpt.Header)
 		}
 

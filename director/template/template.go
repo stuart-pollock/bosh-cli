@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	bosherr "github.com/cloudfoundry/bosh-utils/errors"
+	"github.com/cloudfoundry/bosh-utils/errors"
 	"github.com/stuart-pollock/go-patch/patch"
 	"gopkg.in/yaml.v2"
 )
@@ -122,7 +122,7 @@ func (i interpolator) Interpolate(node interface{}, varsLookup varsLookup) (inte
 		for _, name := range i.extractVarNames(typedNode) {
 			foundVal, found, err := varsLookup.Get(name)
 			if err != nil {
-				return nil, bosherr.WrapErrorf(err, "Finding variable '%s'", name)
+				return nil, errors.WrapErrorf(err, "Finding variable '%s'", name)
 			}
 
 			if found {
@@ -226,7 +226,7 @@ func (t varsTracker) Get(name string) (interface{}, bool, error) {
 
 	def.Options, err = interpolator{}.Interpolate(def.Options, varsLookup{defVarTracker})
 	if err != nil {
-		return nil, false, bosherr.WrapErrorf(err, "Interpolating variable '%s' definition options", name)
+		return nil, false, errors.WrapErrorf(err, "Interpolating variable '%s' definition options", name)
 	}
 
 	if len(defVarTracker.missing) > 0 {
@@ -247,7 +247,7 @@ func (t varsTracker) Get(name string) (interface{}, bool, error) {
 
 func (t varsTracker) scopedVarsTracker(name string) (varsTracker, error) {
 	if _, found := t.visited[name]; found {
-		return varsTracker{}, bosherr.Error("Detected recursion")
+		return varsTracker{}, errors.Error("Detected recursion")
 	}
 
 	varsTracker := newVarsTracker(t.vars, t.expectAllFound, t.expectAllUsed)
@@ -280,7 +280,7 @@ func (t *varsTracker) ExtractDefinitions(obj interface{}) error {
 		if len(def.Type) > 0 {
 			_, _, err := t.Get(def.Name)
 			if err != nil {
-				return bosherr.WrapError(err, "Getting all variables from variable definitions sections")
+				return errors.WrapError(err, "Getting all variables from variable definitions sections")
 			}
 		}
 	}
@@ -295,7 +295,7 @@ func (t varsTracker) FoundVars(obj interface{}) (interface{}, error) {
 	for _, def := range t.defs.Definitions {
 		_, found, err := t.Get(def.Name)
 		if err != nil {
-			return nil, bosherr.WrapError(err, "Getting all variables from variable definitions sections")
+			return nil, errors.WrapError(err, "Getting all variables from variable definitions sections")
 		}
 		if found {
 			foundDefs = append(foundDefs, def.Name)
@@ -334,7 +334,7 @@ func (t varsTracker) Error() error {
 	}
 
 	if len(errs) > 0 {
-		return bosherr.NewMultiError(errs...)
+		return errors.NewMultiError(errs...)
 	}
 
 	return nil
@@ -345,7 +345,7 @@ func (t varsTracker) MissingError() error {
 		return nil
 	}
 
-	return bosherr.WrapError(t.multiErr(t.missing), "Expected to find variables")
+	return errors.WrapError(t.multiErr(t.missing), "Expected to find variables")
 }
 
 func (t varsTracker) ExtraError() error {
@@ -370,7 +370,7 @@ func (t varsTracker) ExtraError() error {
 		return nil
 	}
 
-	return bosherr.WrapError(t.multiErr(unusedNames), "Expected to use variables")
+	return errors.WrapError(t.multiErr(unusedNames), "Expected to use variables")
 }
 
 func (t varsTracker) multiErr(mapWithNames map[string]struct{}) error {
@@ -382,9 +382,9 @@ func (t varsTracker) multiErr(mapWithNames map[string]struct{}) error {
 
 	var errs []error
 	for _, name := range names {
-		errs = append(errs, bosherr.Error(name))
+		errs = append(errs, errors.Error(name))
 	}
-	return bosherr.NewMultiError(errs...)
+	return errors.NewMultiError(errs...)
 }
 
 type varDefinitions struct {

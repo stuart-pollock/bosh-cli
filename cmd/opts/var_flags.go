@@ -1,21 +1,21 @@
 package opts
 
 import (
-	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
+	"github.com/stuart-pollock/bosh-cli/director/template"
 )
 
 // Shared
 type VarFlags struct {
-	VarKVs    []boshtpl.VarKV       `long:"var"        short:"v" value-name:"VAR=VALUE" description:"Set variable"`
-	VarFiles  []boshtpl.VarFileArg  `long:"var-file"             value-name:"VAR=PATH"  description:"Set variable to file contents"`
-	VarsFiles []boshtpl.VarsFileArg `long:"vars-file"  short:"l" value-name:"PATH"      description:"Load variables from a YAML file"`
-	VarsEnvs  []boshtpl.VarsEnvArg  `long:"vars-env"             value-name:"PREFIX"    description:"Load variables from environment variables (e.g.: 'MY' to load MY_var=value)"`
+	VarKVs    []template.VarKV       `long:"var"        short:"v" value-name:"VAR=VALUE" description:"Set variable"`
+	VarFiles  []template.VarFileArg  `long:"var-file"             value-name:"VAR=PATH"  description:"Set variable to file contents"`
+	VarsFiles []template.VarsFileArg `long:"vars-file"  short:"l" value-name:"PATH"      description:"Load variables from a YAML file"`
+	VarsEnvs  []template.VarsEnvArg  `long:"vars-env"             value-name:"PREFIX"    description:"Load variables from environment variables (e.g.: 'MY' to load MY_var=value)"`
 }
 
-func (f VarFlags) AsVariables() boshtpl.Variables {
-	var firstToUse []boshtpl.Variables
+func (f VarFlags) AsVariables() template.Variables {
+	var firstToUse []template.Variables
 
-	staticVars := boshtpl.StaticVariables{}
+	staticVars := template.StaticVariables{}
 
 	for i, _ := range f.VarsEnvs {
 		for k, v := range f.VarsEnvs[i].Vars {
@@ -41,7 +41,7 @@ func (f VarFlags) AsVariables() boshtpl.Variables {
 
 	firstToUse = append(firstToUse, staticVars)
 
-	vars := boshtpl.NewMultiVars(firstToUse)
+	vars := template.NewMultiVars(firstToUse)
 
 	return vars
 }

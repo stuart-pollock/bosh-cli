@@ -4,21 +4,9 @@ import (
 	"github.com/stuart-pollock/go-patch/patch"
 )
 
-type BoshOpts struct {
+type MainOpts struct {
 	// -----> Global options
-
 	VersionOpt func() error `long:"version" short:"v" description:"Show CLI version"`
-
-	ConfigPathOpt string `long:"config" description:"Config file path" env:"BOSH_CONFIG" default:"~/.bosh/config"`
-
-	EnvironmentOpt string `long:"environment" short:"e" description:"Director environment name or URL" env:"BOSH_ENVIRONMENT"`
-	Parallel       int    `long:"parallel" description:"The max number of parallel operations" default:"5"`
-
-	// Specify client credentials
-	ClientOpt       string `long:"client"        description:"Override username or UAA client"        env:"BOSH_CLIENT"`
-	ClientSecretOpt string `long:"client-secret" description:"Override password or UAA client secret" env:"BOSH_CLIENT_SECRET"`
-
-	DeploymentOpt string `long:"deployment" short:"d" description:"Deployment name" env:"BOSH_DEPLOYMENT"`
 
 	// Output formatting
 	ColumnOpt         []ColumnOpt `long:"column"                    description:"Filter to show only given column(s)"`

@@ -24,11 +24,11 @@ func getStructTagForType(field string, opts interface{}) string {
 }
 
 var _ = Describe("Opts", func() {
-	Describe("BoshOpts", func() {
-		var opts *BoshOpts
+	Describe("MainOpts", func() {
+		var opts *MainOpts
 
 		BeforeEach(func() {
-			opts = &BoshOpts{}
+			opts = &MainOpts{}
 		})
 
 		Describe("VersionOpt", func() {

@@ -2,31 +2,27 @@ package cmd
 
 import (
 	"code.cloudfoundry.org/clock"
-	boshlog "github.com/cloudfoundry/bosh-utils/logger"
-	boshsys "github.com/cloudfoundry/bosh-utils/system"
+	"github.com/cloudfoundry/bosh-utils/logger"
+	"github.com/cloudfoundry/bosh-utils/system"
 
-	boshui "github.com/stuart-pollock/bosh-cli/ui"
+	mainUI "github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type BasicDeps struct {
-	UI     *boshui.ConfUI
-	Logger boshlog.Logger
+	UI     *mainUI.ConfUI
+	Logger logger.Logger
 
-	CmdRunner boshsys.CmdRunner
+	CmdRunner system.CmdRunner
 
 	Time clock.Clock
 }
 
-func NewBasicDeps(ui *boshui.ConfUI, logger boshlog.Logger) BasicDeps {
-	return NewBasicDepsWithFS(ui, boshsys.NewOsFileSystemWithStrictTempRoot(logger), logger)
-}
-
-func NewBasicDepsWithFS(ui *boshui.ConfUI, fs boshsys.FileSystem, logger boshlog.Logger) BasicDeps {
-	cmdRunner := boshsys.NewExecCmdRunner(logger)
+func NewBasicDeps(ui *mainUI.ConfUI, log logger.Logger) BasicDeps {
+	cmdRunner := system.NewExecCmdRunner(log)
 
 	return BasicDeps{
 		UI:     ui,
-		Logger: logger,
+		Logger: log,
 
 		CmdRunner: cmdRunner,
 		Time:      clock.NewClock(),

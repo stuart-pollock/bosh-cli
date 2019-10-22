@@ -22,16 +22,16 @@ func NewFactory(deps BasicDeps) Factory {
 func (f Factory) New(args []string) (Cmd, error) {
 	var cmdOpts interface{}
 
-	boshOpts := &BoshOpts{}
+	opts := &MainOpts{}
 
-	boshOpts.VersionOpt = func() error {
+	opts.VersionOpt = func() error {
 		return &goflags.Error{
 			Type:    goflags.ErrHelp,
 			Message: fmt.Sprintf("version %s\n", VersionLabel),
 		}
 	}
 
-	parser := goflags.NewParser(boshOpts, goflags.HelpFlag|goflags.PassDoubleDash)
+	parser := goflags.NewParser(opts, goflags.HelpFlag|goflags.PassDoubleDash)
 
 	for _, c := range parser.Commands() {
 		docsURL := "https://bosh.io/docs/cli-v2#" + c.Name
@@ -74,5 +74,5 @@ func (f Factory) New(args []string) (Cmd, error) {
 		cmdOpts = &MessageOpts{Message: helpText.String()}
 	}
 
-	return NewCmd(*boshOpts, cmdOpts, f.deps), err
+	return NewCmd(*opts, cmdOpts, f.deps), err
 }

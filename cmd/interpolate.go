@@ -4,24 +4,24 @@ import (
 	"github.com/stuart-pollock/go-patch/patch"
 
 	. "github.com/stuart-pollock/bosh-cli/cmd/opts"
-	boshtpl "github.com/stuart-pollock/bosh-cli/director/template"
-	boshui "github.com/stuart-pollock/bosh-cli/ui"
+	"github.com/stuart-pollock/bosh-cli/director/template"
+	"github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type InterpolateCmd struct {
-	ui boshui.UI
+	ui ui.UI
 }
 
-func NewInterpolateCmd(ui boshui.UI) InterpolateCmd {
-	return InterpolateCmd{ui: ui}
+func NewInterpolateCmd(myUi ui.UI) InterpolateCmd {
+	return InterpolateCmd{ui: myUi}
 }
 
 func (c InterpolateCmd) Run(opts InterpolateOpts) error {
-	tpl := boshtpl.NewTemplate(opts.Args.Manifest.Bytes)
+	tpl := template.NewTemplate(opts.Args.Manifest.Bytes)
 
 	vars := opts.VarFlags.AsVariables()
 	op := opts.OpsFlags.AsOp()
-	evalOpts := boshtpl.EvaluateOpts{
+	evalOpts := template.EvaluateOpts{
 		ExpectAllKeys:     opts.VarErrors,
 		ExpectAllVarsUsed: opts.VarErrorsUnused,
 	}

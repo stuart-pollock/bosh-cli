@@ -2,7 +2,8 @@ package cmd
 
 import (
 	"fmt"
-	boshui "github.com/stuart-pollock/bosh-cli/ui"
+
+	"github.com/stuart-pollock/bosh-cli/ui"
 )
 
 type Diff struct {
@@ -15,16 +16,16 @@ func NewDiff(lines [][]interface{}) Diff {
 	}
 }
 
-func (d Diff) Print(ui boshui.UI) {
+func (d Diff) Print(myUi ui.UI) {
 	for _, line := range d.lines {
 		lineMod, _ := line[1].(string)
 
 		if lineMod == "added" {
-			ui.BeginLinef("+ %s\n", line[0])
+			myUi.BeginLinef("+ %s\n", line[0])
 		} else if lineMod == "removed" {
-			ui.BeginLinef("- %s\n", line[0])
+			myUi.BeginLinef("- %s\n", line[0])
 		} else {
-			ui.BeginLinef("  %s\n", line[0])
+			myUi.BeginLinef("  %s\n", line[0])
 		}
 	}
 }
